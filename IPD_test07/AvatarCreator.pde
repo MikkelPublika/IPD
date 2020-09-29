@@ -95,6 +95,7 @@ class Arrow {
 class Avatar {
   float x;
   int y;
+  float startX;
   int size = 50;
   float speed = 0;
   
@@ -106,6 +107,11 @@ class Avatar {
   Avatar(int xx, int yy){
     x = xx;
     y = yy;
+    startX = xx;
+  }
+  
+  public void resetPos(){
+    x = startX;
   }
   
   void addIndex(int id, int value){
